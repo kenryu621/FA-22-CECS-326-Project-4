@@ -21,6 +21,7 @@ public class FCFS implements Algorithm {
         for (int i = 0; i < taskQueue.size(); i++) {
             Task nextTask = pickNextTask();
             CPU.run(nextTask, nextTask.getBurst());
+            System.out.println("Task " + nextTask.getName() + " finished.\n");
         }
     }
 
